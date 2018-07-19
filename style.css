@@ -1,0 +1,96 @@
+/*设置操场区域宽高*/
+.playground{
+    width: 800px;
+    height: 400px;
+    border:1px dotted black;
+}
+/*设置操场中心区域*/
+.central_area{
+    width: 500px;
+    height:200px;
+    /*水平方向居中显示*/
+    margin: 100px auto;
+    background:#6F9B3A;
+    /*关键代码，将操场变换为椭圆形*/
+    border-radius:200px;
+    /*关键代码，设置多层环形跑道*/
+    box-shadow: 0 0 0 10px #E65868,0 0 0 11px #eee,0 0 0 20px #E65868,0 0 0 21px #eee,0 0 0 30px #E65868,0 0 0 31px #eee,0 0 0 40px #E65868;
+}
+/*足球场区域*/
+.football_field{
+    width:350px;
+    height:188px;
+    border:2px solid #fff;
+    position: relative;
+    top: 4px;
+    left:75px;
+}
+/*足球场左半部分*/
+.football_field_left{
+    width:175px;
+    height:188px;
+    border-right:2px solid #fff;
+    float: left;
+}
+/*足球场左半部分小球框*/
+.football_field_left::before{
+    content: '';
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    top:64px;
+    border:2px solid #fff;
+    border-left:none;
+}
+/*足球场左半部分大球框*/
+.football_field_left::after{
+    content: '';
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    top:34px;
+    border:2px solid #fff;
+    border-left:none;
+}
+/*足球场右半部分*/
+.football_field_right{
+    width:175px;
+    height:188px;
+    float: left;
+}
+/*足球场右半部分小球框*/
+.football_field_right::before{
+    content: '';
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    top:64px;
+    right: 0;
+    border:2px solid #fff;
+    border-right:none;
+}
+/*足球场左右半部分大球框*/
+.football_field_right::after{
+    content: '';
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    top:34px;
+    right: 0;
+    border:2px solid #fff;
+    border-right:none;
+}
+/* 足球场中心圈 */
+.central_circle{
+    width:50px;
+    height:50px;
+    border:1px solid #fff;
+    /*设置为圆形*/
+    border-radius:50%;
+    /*居中显示*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
